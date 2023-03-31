@@ -1,0 +1,766 @@
+"use strict";function _slicedToArray(t,n){return _arrayWithHoles(t)||_iterableToArrayLimit(t,n)||_nonIterableRest()}function _nonIterableRest(){throw new TypeError("Invalid attempt to destructure non-iterable instance")}function _iterableToArrayLimit(t,n){if(Symbol.iterator in Object(t)||"[object Arguments]"===Object.prototype.toString.call(t)){var e=[],o=!0,c=!1,i=void 0;try{for(var r,s=t[Symbol.iterator]();!(o=(r=s.next()).done)&&(e.push(r.value),!n||e.length!==n);o=!0);}catch(a){c=!0,i=a}finally{try{o||null==s["return"]||s["return"]()}finally{if(c)throw i}}return e}}function _arrayWithHoles(t){return Array.isArray(t)?t:void 0}function _typeof(t){return(_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(t)}!function(t){if("function"==typeof define&&define.amd)define("icon-set-loader",[],t.bind(null,0));else{if("object"!==("undefined"==typeof exports?"undefined":_typeof(exports)))throw new Error("Unexpected environment");module.exports=t(1)}}(function(t){var n=1,e=0,o=function(){var o=arguments.length>0&&void 0!==arguments[0]?arguments[0]:[],c=arguments.length>1&&void 0!==arguments[1]?arguments[1]:function(){},i=null;return t===n?i=o.map(function(t){return'<link type="text/css" rel="stylesheet" href="'.concat(t,'">')}).join(""):t===e&&o&&o.forEach(function(t){if(!document.querySelector('link[href*="'.concat(t,'"]'))){var n=document.createElement("link");[["type","text/css"],["rel","stylesheet"],["href",t]].forEach(function(t){var e=_slicedToArray(t,2),o=e[0],c=e[1];n.setAttribute(o,c)}),document.head.appendChild(n)}}),c(),i};return{defaultIconSet:"fontAwesome",iconSetsDeps:{fontAwesome:["//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css","/css/lib/fontawesome-brand.min.css"],octIcons:["//cdnjs.cloudflare.com/ajax/libs/octicons/3.3.0/octicons.min.css"],typIcons:["//cdnjs.cloudflare.com/ajax/libs/typicons/2.0.7/typicons.min.css"],icoMoon:["/widgets/icon/icon-packs/icomoon/icomoon-free.min.css"],material:["/widgets/icon/icon-packs/material/material.min.css"],glyphIcons:["/css/lib/bootstrap.icons.min.css"]},loadIconSet:function(t){var n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:function(){},e=this.iconSetsDeps[t]||this.iconSetsDeps[this.defaultIconSet];return o(e,n)},loadIconSetPack:function(e){var c=this,i=arguments.length>1&&void 0!==arguments[1]?arguments[1]:function(){},r=[];return e.map(function(t){r.push(c.iconSetsDeps[t])}),t===n?r.reduce(function(t,n){return"".concat(t," ").concat(o(n,i))}):void r.forEach(function(t){o(t,i)})},loadAll:function(e){var c=this;return t===n?Object.keys(this.iconSetsDeps).reduce(function(t,n){return"".concat(t," ").concat(o(c.iconSetsDeps[n],function(){return e(n)}))}):void Object.keys(this.iconSetsDeps).forEach(function(t){o(c.iconSetsDeps[t],function(){e(t)})})}}});
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map
+
+//# sourceMappingURL=iconSetLoader.js.map

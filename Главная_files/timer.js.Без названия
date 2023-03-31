@@ -1,0 +1,1214 @@
+"use strict";define(["jquery","_","text!/html/countdown-timer/timer-tmpl.html","text!/html/countdown-timer/timer-digit--flip.html","text!/html/countdown-timer/timer-digit--transparent.html","css!/css/require/countdown-timer.css"],function(t,e,n,i,r){var o=function(){return function(o){var a=this;a.defaults={showDays:!0,showSeconds:!0,showLabels:!0,onCreate:function(){return function(){}}(),onStop:function(){return function(){}}()},o=e.extend(a.defaults,o);var s=o.seconds,d=a.getTimeLeft(s),u=["days","hours","minutes","seconds"];o.showDays||(u=e.without(u,"days")),o.showSeconds||(u=e.without(u,"seconds"));var c="transparent"===o.theme?r:i;a.translations={en:{days:"days",hours:"hours",minutes:"minutes",seconds:"seconds"}};var f=t(e.template(n,e.extend({time:a.getTimeLeft(s).formatted,sections:u,translations:o.translations||a.translations.en,renderDigit:function(){return function(t){return e.template(c,{val:t,isNew:!1})}}()},e.pick(o,"theme","showLabels"))));o.$el.html(f);var m=function(){return function(t){var n=a.getTimeLeft(t);Object.keys(n.raw).forEach(function(t){n.raw[t]===d.raw[t]||(e.range(d.formatted[t].length-n.formatted[t].length).forEach(function(){n.formatted[t].unshift("0")}),n.formatted[t].forEach(function(e,i){n.formatted[t][i]===d.formatted[t][i]||a.renderDigit(f,t,i,n.formatted[t][i],o.theme)}))})}}();return o.onCreate(),a.setSize(o.$el),t(window).on("resize",function(){a.setSize(o.$el)}),o.isConstructor&&t(window).on("changeDeviceMode",function(){a.setSize(o.$el)}),0===s?void o.onStop():void(!o.autoStart||o.isConstructor||(a.iterationInterval=setInterval(function(){s--,m(s),d=a.getTimeLeft(s),0===s&&(clearInterval(a.iterationInterval),o.onStop())},1e3)))}}();return o.prototype.destroy=function(){clearInterval(this.iterationInterval)},o.prototype.getDigitsStr=function(t){var e=Math.floor(t).toString();return 1===e.length&&(e="0"+e),e.split("")},o.prototype.getTimeLeft=function(t){var e=this,n=1,i=60*n,r=60*i,o=24*r,a=t%i/n,s=(t-a*n)%r/i,d=(t-a*n-s*i)%o/r,u=(t-t%o)/o;return{raw:{days:u,minutes:s,hours:d,seconds:a},formatted:{days:e.getDigitsStr(u),hours:e.getDigitsStr(d),minutes:e.getDigitsStr(s),seconds:e.getDigitsStr(a)}}},o.prototype.renderDigit=function(n,o,a,s,d){var u=n.find(".js-countdown-timer__section").filter('[data-section="'+o+'"]');if(u.length){var c="transparent"===d,f=c?r:i,m=u.find(".js-countdown-timer__section__digit-wrap").eq(a),l=m.find(".js-countdown-timer__section__digit"),h=t(e.template(f,{val:s,isNew:!0}));c?l.replaceWith(h):(m.attr("data-is-changing","true"),l.attr("data-type","old"),h.attr("data-type","new").prependTo(m),setTimeout(function(){l.remove(),h.removeAttr("data-type"),m.removeAttr("data-is-changing")},800))}},o.prototype.setSize=function(e){e.find(".js-countdown-timer").each(function(){var e=t(this),n=e.data("fullWidth");if(!n){var i=e.clone();i.css({opacity:0,visibility:"hidden"}).attr("data-size","default").insertAfter(e),n=i.width(),e.data("fullWidth",n),i.remove()}var r=e.parent().width(),o="default";400>r?o="x-sm":(646>r||n>r)&&(o="sm"),e.attr("data-size",o)})},o});
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map
+
+//# sourceMappingURL=timer.js.map

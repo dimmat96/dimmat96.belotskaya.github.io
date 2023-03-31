@@ -1,0 +1,864 @@
+"use strict";var _Mathfloor=Math.floor;define("widget-timer-view",["jquery","_","js/ulib/countdown-timer/timer"],function(t,n,e){return{open:function(){return function(t,n){var e=this,i=document.getElementById(t);i&&(this.isConstructor=n,this.initI18n().then(function(){e.init(i)}))}}(),initI18n:function(){return function(){var t=this;return new Promise(function(n){window.cache.timer&&window.cache.timer.i18n?n():window.require(["i18n-view"],function(e){t.i18n=e("widgets.timer"),n()})})}}(),i18n:function(){return function(t){return window.cache.timer&&window.cache.timer.i18n[t]}}(),addEventListeners:function(){return function(){var n=this;t(window).on("colResized",function(e,i){t(i).parent().find(".js-w-timer__container").each(function(){var e=t(this);setTimeout(function(){t.each(n.time,function(){this.setSize(e)})},300)})})}}(),init:function(){return function(n){var e=this,i=n.id,r=t(n),o=t(".js-w-timer__container",r),a=r.data("data");"string"==typeof a&&(a=JSON.parse(decodeURIComponent(a)));var s={days:a.translations.days||e.i18n("days"),hours:a.translations.hours||e.i18n("hours"),minutes:a.translations.minutes||e.i18n("minutes"),seconds:a.translations.seconds||e.i18n("seconds")},u={toDate:function(){return function(t){var n=new Date(t.toDate.timeEnd).valueOf(),r=Date.now(),a=_Mathfloor((n-r)/1e3);0>a&&(a=0),e.startTimer({$el:o,autoStart:t.isStarted,duration:a,translations:s},i,t)}}(),period:function(){return function(t){var n=new Date(t.period.timeEnd).valueOf(),r=Date.now(),a=_Mathfloor((n-r)/1e3);0>a&&(a=0),e.startTimer({$el:o,autoStart:t.isStarted,duration:a,translations:s},i,t)}}(),renewable:function(){return function(t){e.startTimer({$el:o,autoStart:t.isStarted,duration:t.renewable.seconds,translations:s},i,t)}}(),cycle:function(){return function(t){!function(){function n(){var r=!1,a=!1,u=0,c=function(){return function(){var t=new Date;return 60*(60*t.getHours())+60*t.getMinutes()+t.getSeconds()}}()(),d=t.cycle.startPoint,f=(new Date).getTimezoneOffset()/-60;d+=60*(60*(f-t.utcHoursOffset)),r=c>=d,r||setTimeout(n,1e3*(d-c)),r?u=t.cycle.duration-(c-d):t.cycle.duration>86400-d+c?(a=!0,u=t.cycle.duration-(86400-d+c)):u=0,0>u&&(u=0),e.startTimer({$el:o,autoStart:t.isStarted&&(r||a),duration:u,translations:s},i,t)}return n}()()}}()};e.listenersAdded||(e.addEventListeners(),e.listenersAdded=!0),u[a.timerVariant](a)}}(),startTimer:function(){return function(n,i,r){var o=this;o.time&&t.each(o.time,function(){this.widgetId==i&&this.destroy()});var a=new e({$el:n.$el,autoStart:n.autoStart,seconds:n.duration,theme:r.designVariant,translations:n.translations,showDays:r.showDays,showSeconds:r.showSeconds,showLabels:r.showLabels,isConstructor:o.isConstructor,onCreate:function(){return function(){o.timerStopActionReverse(i,r)}}(),onStop:function(){return function(){o.timerStopAction(i,r)}}()});a.widgetId=i,o.time?t.each(o.time,function(){this.widgetId==i||a.add||(o.time.push(a),a.add=!0)}):(o.time=[],o.time.push(a))}}(),timerStopAction:function(){return function(e,i){var r=t("#"+e),o={hideTimer:function(){return function(){r.attr("data-is-hidden","true")}}(),showText:function(){return function(){t(".js-w-timer__stop-text",r).html("<h3>"+n.escape(i.timerStopText)+"</h3>"),setTimeout(function(){r.attr("data-timer-is-stopped","true")})}}(),doNothing:function(){return function(){}}()};o[i.timerStopAction]()}}(),timerStopActionReverse:function(){return function(n,e){var i=t("#"+n),r={hideTimer:function(){return function(){i.removeAttr("data-is-hidden","false")}}(),showText:function(){return function(){i.removeAttr("data-timer-is-stopped")}}(),doNothing:function(){return function(){}}()};r[e.timerStopAction]()}}()}});
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
